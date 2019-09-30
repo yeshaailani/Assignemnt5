@@ -1,0 +1,109 @@
+
+body {
+    @include backgroundImage($backgroundimg, $white, repeat-x);
+    font-family: $font;
+    font-size:1em;
+    line-height:2em;
+    @include boundaries(0, false);
+}
+main {
+    @include dim(auto, 940px);
+    @include boundaries(0 auto, false);
+
+    @include break($size-large){
+        width:768px;
+    }
+    @include break($size-medium){
+        width:460px;
+    }
+    @include break($size-small){
+        width:300px;
+    }   
+}
+
+#headline {
+    text-align:center;
+    @include boundaries(0 auto, false);
+    background-color: $bgcolor;
+    @include dim(130px, 100%);
+
+    h1{
+        color:$white;
+        font-size:2.5em;
+        font-weight:100;
+        padding-top:50px;
+
+        @include break($size-medium){
+            font-size:2em;
+            padding-top:50px;
+        } 
+        @include break($size-small){
+            font-size:1.5em;
+            padding-top:30px;
+        } 
+    }
+}
+
+#content {
+    @include dim(auto, 940px);
+    @include boundaries(20px auto, false);
+
+    @include break($size-large){
+    width:inherit;
+    }
+
+    h3{
+        color: $grey;
+        font-size:2em;
+        font-weight:400;
+
+        @include break($size-small){
+            font-size:1.6em;
+        }
+
+    }
+
+    #products{
+        width: (100% / 2);
+        @include setFloat(left);
+        
+            @include break($size-large){
+                @include dim(auto, 46%);
+                @include boundaries(0 2%, false);
+                margin:0 2%;
+            } 
+            @include break($size-medium){
+                @include dim(auto, 96%);
+                @include boundaries(0 2%, false);
+                @include setFloat(none);
+            } 
+            
+        
+    }
+    img{
+        @include setFloat(left);
+        margin-right:20px;
+    }
+    article{
+        margin-bottom:40px;
+        margin-right: 5px;
+    }
+    h4{
+        line-height:1em;
+    }
+    
+    #testimonials{
+        @include dim(auto, 50%);
+        @include setFloat(right);
+
+        @include break($size-large){
+            @include dim(auto, 46%);
+            @include boundaries(0 2%, false);
+        } 
+        @include break($size-medium){
+            @include dim(auto, 96%);
+            @include boundaries(0 2%, false);
+            @include setFloat(none);
+        } 
+    }
+}

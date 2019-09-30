@@ -1,0 +1,21 @@
+{
+    "name": "Assignment-5",
+    "version": "1.0.0",
+    "description": "Introduction to Sass",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    
+    },
+    
+      "gulp": "^4.0.2",
+      "gulp-sass": "^4.0.2",
+      "node-sass": "^4.12.0"
+    }
+  }
+  

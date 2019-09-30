@@ -1,0 +1,22 @@
+figure {
+        @include backgroundImage($logo-img, false, no-repeat, 0 50px, auto);
+        @include dim(190px, 400px);
+        @include setFloat(left);
+        display:block;
+        @include boundaries(0, false);
+        @include break($size-large){
+                width:inherit;height:140px;@include setFloat(none);background-position:center;
+        }
+        @include break($size-small){
+                background-size:contain;height:100px;
+        }  
+}
+nav {
+        @include navigate();
+        @include break($size-large){
+                width:inherit;height:50px;@include setFloat(none);text-align:center;
+        }
+        @include break($size-small){
+                font-size:0.8em;margin:0 5px;
+        } 
+}
