@@ -122,8 +122,8 @@ header {
                 text-indent:-9999px;
             }
             .one {@extend %div; background:$social_media 0 0;}
-            .two {@extend %div; background:$social_media (0 - 38px) 0;}
-            .three {@extend %div; background:$social_media (0 - (38px * 2)) 0;}
-            .four {@extend %div; background:$social_media (0 - (38px * 3)) 0;}
+            .two {@extend %div; background:$social_media (-1 * 38px) 0;}
+            .three {@extend %div; background:$social_media (-2 * (38px)) 0;}
+            .four {@extend %div; background:$social_media (-3 * (38px)) 0;}
         }
     
